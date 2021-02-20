@@ -1,20 +1,30 @@
 <template>
-    <Layout>
+  <Layout>
+    <section class="container mx-24 py-24 flex flex-col justify-center">
+      <heading-one>Hi, I'm Joe.</heading-one>
+      <p class="text-3xl text-gray-600 w-3/5">
+        I’m a front-end developer based out of Perth. I spend my days designing
+        and building JAMstack websites.
+      </p>
+    </section>
 
-    <h1 class="text-xl mb-2">Welcome to your Website!</h1>
-
-    <br>
-
-    <p>This is a simple minimal blog starter made with <a class="text-blue-500" href="https://gridsome.org/">Gridsome</a> x <a class="text-blue-500" href="https://tailwindcss.com/">TailwindCSS</a>.</p>
-    <p><a class="text-blue-500" href="https://ciaran.co.za/">Created by Ciaran.</a></p>
-
-    </Layout>
+    <section class="bg-blue-500 relative py-12">
+      <the-wave></the-wave>
+    </section>
+  </Layout>
 </template>
 
 <script>
+import HeadingOne from "@/components/typography/HeadingOne";
+import TheWave from "@/components/svg/TheWave";
+
 export default {
+  components: {
+    "heading-one": HeadingOne,
+    "the-wave": TheWave,
+  },
   metaInfo: {
-    title: 'Home'
-  }
-}
+    title: "Home",
+  },
+};
 </script>

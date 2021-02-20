@@ -15,7 +15,7 @@ export default function(Vue, { router, head, isClient }) {
 		{
 			rel: 'stylesheet',
 			href:
-				'https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&family=Rubik:ital,wght@0,700;1,500&display=swap',
+				'https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&family=Rubik:wght@400;500;600&display=swap',
 		}
 	);
 }

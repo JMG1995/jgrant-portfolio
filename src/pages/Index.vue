@@ -8,16 +8,7 @@
       </p>
     </section>
 
-    <section class="bg-blue-700 relative py-12">
-      <the-wave></the-wave>
-      <div class="container">
-        <h2 class="text-center text-blue-100 supertitle mb-12">
-          Stuff I've Built
-        </h2>
-
-        <the-projects></the-projects>
-      </div>
-    </section>
+    <TheProjects />
   </Layout>
 </template>
 
@@ -30,7 +21,7 @@ export default {
   components: {
     "the-wave": TheWave,
     "the-arrow": TheArrow,
-    "the-projects": TheProjects,
+    TheProjects,
   },
   metaInfo: {
     title: "Home",

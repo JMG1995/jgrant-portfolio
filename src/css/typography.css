@@ -1,0 +1,23 @@
+body {
+	@apply font-body;
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+	@apply font-heading;
+}
+
+:is(h1, h2, h3) {
+	@apply font-bold;
+}
+
+h1 {
+	@apply text-5xl;
+}
+
+h3 {
+	@apply text-2xl tracking-wide;
+}
+
+.supertitle {
+	@apply tracking-wider uppercase font-medium text-base;
+}

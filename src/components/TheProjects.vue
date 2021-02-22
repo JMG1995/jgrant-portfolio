@@ -6,14 +6,20 @@
         Stuff I've Built
       </h2>
 
-      <transition name="slide" mode="out-in">
-        <TheProject
-          :key="currentProject.id"
-          :project="currentProject"
-          @prevProject="prevProject"
-          @nextProject="nextProject"
-        />
-      </transition>
+      <div class="grid grid-cols-2 gap-6">
+        <transition name="image" mode="out-in">
+          <img :key="currentProject.id" :src="currentProject.image" />
+        </transition>
+
+        <transition name="slide" mode="out-in">
+          <TheProject
+            :key="currentProject.id"
+            :project="currentProject"
+            @prevProject="prevProject"
+            @nextProject="nextProject"
+          />
+        </transition>
+      </div>
     </div>
   </section>
 </template>
@@ -63,7 +69,7 @@ export default {
             Nunc sodales vel orci vel consequat. Nunc commodo, nibh vel ultricies
             congue, Integer tempus pellentesque libero, eget vestibulum sapien vulputate a. libero tellus pulvinar dui, nec porttitor quam sapien a est. Sus
           </p>`,
-          image: "/images/carbon-neutral.png",
+          image: "/images/joegrant.png",
           url: "https://riskadvisoryservices.com.au",
           source: null,
         },
@@ -98,3 +104,18 @@ export default {
   },
 };
 </script>
+
+<style>
+.image-enter-active {
+  transition: all 0.3s ease;
+}
+.image-leave-active {
+  transition: all 0.3s ease;
+}
+.image-enter {
+  opacity: 0.6;
+}
+.image-leave-to {
+  opacity: 0.6;
+}
+</style>

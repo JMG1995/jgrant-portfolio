@@ -1,5 +1,6 @@
 <template>
   <svg
+    @click="$emit('clicked')"
     class="stroke-current"
     viewBox="0 0 20 16"
     fill="none"

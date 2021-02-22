@@ -1,34 +1,29 @@
 <template>
   <div class="grid grid-cols-2 gap-6">
-    <g-image src="~/images/carbon-neutral.png" class="w-full" />
-
+    <img :src="project.image" />
     <div class="mr-24 mt-3">
       <div class="flex items-center justify-between mb-2">
-        <h3 class="text-white">Carbon Neutral</h3>
+        <h3 class="text-white">{{ project.title }}</h3>
 
         <div class="flex items-center space-x-4">
           <the-arrow
-            class="text-blue-100 opacity-80 hover:opacity-100 transition duration-200 ease-in-out w-5 h-4 cursor-pointer transform rotate-180"
+            @clicked="$emit('prevProject')"
+            class="text-blue-100 opacity-50 hover:opacity-100 transition duration-200 ease-in-out w-5 h-4 cursor-pointer transform rotate-180"
           ></the-arrow>
           <the-arrow
-            class="text-blue-100 opacity-80 hover:opacity-100 transition duration-200 ease-in-out w-5 h-4 cursor-pointer"
+            @clicked="$emit('nextProject')"
+            class="text-blue-100 opacity-50 hover:opacity-100 transition duration-200 ease-in-out w-5 h-4 cursor-pointer"
           ></the-arrow>
         </div>
       </div>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum
-        egestas posuere. Donec ac consequat ligula. Proin ullamcorper tempor
-        quam, ac lacinia sem cursus ut. Integer tempus pellentesque libero, eget
-        vestibulum sapien vulputate a.
-      </p>
-      <p>
-        Nunc sodales vel orci vel consequat. Nunc commodo, nibh vel ultricies
-        congue, libero tellus pulvinar dui, nec porttitor quam sapien a est. Sus
-      </p>
+      <div
+        class="text-blue-100 flex flex-col space-y-6"
+        v-html="project.description"
+      ></div>
       <div class="links flex text-blue-100 items-center space-x-6 mt-6">
         <a
           class="flex items-center border-b border-blue-100 opacity-80 hover:text-white hover:opacity-100 hover:border-white transition duration-200 ease-in-out"
-          href="https://google.com.au"
+          :href="project.url"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -47,18 +42,27 @@ import TheArrow from "@/components/svg/TheArrow";
 
 export default {
   name: "TheProject",
+  props: ["project"],
   components: {
     "the-arrow": TheArrow,
   },
 };
 </script>
 
-<style scoped>
-p {
-  @apply text-blue-100;
+<style>
+.slide-enter-active {
+  transition: all 0.7s ease;
+}
+.slide-leave-active {
+  transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.slide-enter {
+  transform: translateX(10px);
+  opacity: 0;
+}
 
-  & ~ p {
-    @apply mt-6;
-  }
+.slide-leave-to {
+  transform: translateX(-10px);
+  opacity: 0;
 }
 </style>

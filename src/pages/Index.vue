@@ -13,14 +13,10 @@
 </template>
 
 <script>
-import TheWave from "@/components/svg/TheWave";
-import TheArrow from "@/components/svg/TheArrow.vue";
 import TheProjects from "@/components/TheProjects.vue";
 
 export default {
   components: {
-    "the-wave": TheWave,
-    "the-arrow": TheArrow,
     TheProjects,
   },
   metaInfo: {

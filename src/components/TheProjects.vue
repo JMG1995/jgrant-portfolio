@@ -1,12 +1,12 @@
 <template>
-  <section class="bg-blue-700 relative py-12">
+  <section class="bg-blue-700 relative py-6 lg:py-12">
     <TheWave />
     <div class="container">
-      <h2 class="text-center text-blue-100 supertitle mb-12">
+      <h2 class="text-center text-blue-100 supertitle mb-6 lg:mb-12">
         Stuff I've Built
       </h2>
 
-      <div class="grid grid-cols-2 gap-6">
+      <div class="grid lg:grid-cols-2 gap-6">
         <transition name="image" mode="out-in">
           <img
             :key="currentProject.id"

@@ -1,9 +1,9 @@
 <template>
-  <div class="mr-24 mt-3">
-    <div class="flex items-center justify-between mb-2">
-      <h3 class="text-white">{{ project.title }}</h3>
-
-      <div class="flex items-center space-x-4">
+  <div class="px-6 md:px-0 md:mr-12 lg:mr-24 md:mt-3">
+    <div
+      class="flex flex-col lg:flex-row lg:items-center space-y-6 lg:space-y-0 justify-between mb-2"
+    >
+      <div class="flex items-center space-x-4 lg:order-2">
         <the-arrow
           @clicked="$emit('prevProject')"
           class="text-blue-100 opacity-50 hover:opacity-100 transition duration-200 ease-in-out w-5 h-4 cursor-pointer transform rotate-180"
@@ -13,6 +13,8 @@
           class="text-blue-100 opacity-50 hover:opacity-100 transition duration-200 ease-in-out w-5 h-4 cursor-pointer"
         ></the-arrow>
       </div>
+
+      <h3 class="text-white">{{ project.title }}</h3>
     </div>
     <div
       class="text-blue-100 flex flex-col space-y-6"

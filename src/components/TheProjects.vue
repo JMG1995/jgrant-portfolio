@@ -8,7 +8,11 @@
 
       <div class="grid grid-cols-2 gap-6">
         <transition name="image" mode="out-in">
-          <img :key="currentProject.id" :src="currentProject.image" />
+          <img
+            :key="currentProject.id"
+            :src="currentProject.image"
+            :alt="currentProject.alt"
+          />
         </transition>
 
         <transition name="slide" mode="out-in">
@@ -53,6 +57,7 @@ export default {
             congue, libero tellus pulvinar dui, nec porttitor quam sapien a est. Sus
           </p>`,
           image: "/images/carbon-neutral.png",
+          alt: "MacBook Pro with a great looking website on the screen.",
           url: "https://carbonneutral.com.au",
           source: null,
         },
@@ -70,6 +75,7 @@ export default {
             congue, Integer tempus pellentesque libero, eget vestibulum sapien vulputate a. libero tellus pulvinar dui, nec porttitor quam sapien a est. Sus
           </p>`,
           image: "/images/joegrant.png",
+          alt: "A MacBook Pro with an excellent-looking website on the screen.",
           url: "https://riskadvisoryservices.com.au",
           source: null,
         },

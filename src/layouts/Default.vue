@@ -25,12 +25,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-/* Add any Global Styles Here */
-
-.active--exact {
-  /* Active Nav Link */
-  @apply text-gray-900;
-}
-</style>

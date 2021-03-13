@@ -8,7 +8,7 @@
     "
   >
     <div
-      class="fixed h-full w-full pointer-events-none z-10 transition duration-200 ease-in-out"
+      class="fixed h-full w-full pointer-events-none z-10 bg-transparent transition duration-200 ease-in-out"
       :class="menuIsOpen ? 'bg-black md:bg-transparent bg-opacity-50' : ''"
     ></div>
     <TheHeader @toggleMenu="toggleOverlay()" />

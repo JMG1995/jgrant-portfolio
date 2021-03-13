@@ -31,28 +31,37 @@
       >
     </nav>
 
-    <TheHamburger class="md:hidden w-6 h-6" @clicked="toggleMenuIsOpen()" />
+    <TheHamburger
+      class="md:hidden w-6 h-6 hover:text-blue-500 cursor-pointer transition duration-200 ease-in-out"
+      @clicked="toggleMenu()"
+    />
     <nav
       class="flex flex-col gap-y-6 md:hidden fixed top-0 right-0 w-screen bg-white p-6 shadow-xl h-full max-w-sm transition duration-200 ease-in-out transform z-20"
       :class="menuIsOpen ? 'translate-x-0' : 'translate-x-full'"
     >
+      <div class="flex items-center justify-end">
+        <TheCross
+          class="w-6 h-6 hover:text-red-600 cursor-pointer transition duration-200 ease-in-out"
+          @clicked="toggleMenu()"
+        />
+      </div>
       <g-link
-        class="hover:text-blue-500 transition duration-200 ease-in-out"
+        class="self-start hover:text-blue-500 transition duration-200 ease-in-out"
         to="/"
         >Home</g-link
       >
       <g-link
-        class="hover:text-blue-500 transition duration-200 ease-in-out"
+        class="self-start hover:text-blue-500 transition duration-200 ease-in-out"
         to="/about"
         >About</g-link
       >
       <g-link
-        class="hover:text-blue-500 transition duration-200 ease-in-out"
+        class="self-start hover:text-blue-500 transition duration-200 ease-in-out"
         to="/blog"
         >Blog</g-link
       >
       <g-link
-        class="hover:text-blue-500 transition duration-200 ease-in-out"
+        class="self-start hover:text-blue-500 transition duration-200 ease-in-out"
         to="/contact"
         >Contact</g-link
       >
@@ -70,10 +79,12 @@ query {
 
 <script>
 import TheHamburger from "@/components/svg/TheHamburger";
+import TheCross from "@/components/svg/TheCross";
 
 export default {
   components: {
     TheHamburger,
+    TheCross,
   },
   data() {
     return {
@@ -81,7 +92,7 @@ export default {
     };
   },
   methods: {
-    toggleMenuIsOpen() {
+    toggleMenu() {
       this.$emit("toggleMenu");
       this.menuIsOpen = !this.menuIsOpen;
     },

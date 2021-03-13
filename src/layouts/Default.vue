@@ -1,11 +1,15 @@
 <template>
   <div
     class="text-gray-900 relative"
-    :class="menuIsOpen ? 'max-h-screen overflow-hidden' : ''"
+    :class="
+      menuIsOpen
+        ? 'max-h-screen overflow-hidden md:max-h-full md:overflow-visible'
+        : ''
+    "
   >
     <div
       class="fixed h-full w-full pointer-events-none z-10 transition duration-200 ease-in-out"
-      :class="menuIsOpen ? 'bg-black bg-opacity-50' : ''"
+      :class="menuIsOpen ? 'bg-black md:bg-transparent bg-opacity-50' : ''"
     ></div>
     <TheHeader @toggleMenu="toggleOverlay()" />
 

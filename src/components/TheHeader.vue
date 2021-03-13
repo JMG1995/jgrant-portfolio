@@ -31,34 +31,32 @@
       >
     </nav>
 
-    <div>
-      <TheHamburger class="w-6 h-6" @clicked="toggleMenuIsOpen()" />
-      <nav
-        class="flex flex-col gap-y-6 md:hidden fixed top-0 w-screen bg-blue-400 h-full max-w-xl transition duration-200 ease-in-out transform"
-        :class="menuIsOpen ? 'translate-x-0' : 'translate-x-full'"
+    <TheHamburger class="md:hidden w-6 h-6" @clicked="toggleMenuIsOpen()" />
+    <nav
+      class="flex flex-col gap-y-6 md:hidden fixed top-0 right-0 w-screen bg-white p-6 shadow-xl h-full max-w-sm transition duration-200 ease-in-out transform z-20"
+      :class="menuIsOpen ? 'translate-x-0' : 'translate-x-full'"
+    >
+      <g-link
+        class="hover:text-blue-500 transition duration-200 ease-in-out"
+        to="/"
+        >Home</g-link
       >
-        <g-link
-          class="hover:text-blue-500 transition duration-200 ease-in-out"
-          to="/"
-          >Home</g-link
-        >
-        <g-link
-          class="hover:text-blue-500 transition duration-200 ease-in-out"
-          to="/about"
-          >About</g-link
-        >
-        <g-link
-          class="hover:text-blue-500 transition duration-200 ease-in-out"
-          to="/blog"
-          >Blog</g-link
-        >
-        <g-link
-          class="hover:text-blue-500 transition duration-200 ease-in-out"
-          to="/contact"
-          >Contact</g-link
-        >
-      </nav>
-    </div>
+      <g-link
+        class="hover:text-blue-500 transition duration-200 ease-in-out"
+        to="/about"
+        >About</g-link
+      >
+      <g-link
+        class="hover:text-blue-500 transition duration-200 ease-in-out"
+        to="/blog"
+        >Blog</g-link
+      >
+      <g-link
+        class="hover:text-blue-500 transition duration-200 ease-in-out"
+        to="/contact"
+        >Contact</g-link
+      >
+    </nav>
   </header>
 </template>
 
@@ -84,6 +82,7 @@ export default {
   },
   methods: {
     toggleMenuIsOpen() {
+      this.$emit("toggleMenu");
       this.menuIsOpen = !this.menuIsOpen;
     },
   },

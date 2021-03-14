@@ -17,6 +17,8 @@
     <main>
       <slot />
     </main>
+
+    <TheFooter />
   </div>
 </template>
 
@@ -30,9 +32,11 @@ query {
 
 <script>
 import TheHeader from "@/components/TheHeader";
+import TheFooter from "@/components/TheFooter";
 export default {
   components: {
     TheHeader,
+    TheFooter,
   },
   data() {
     return {

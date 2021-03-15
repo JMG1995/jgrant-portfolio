@@ -10,24 +10,11 @@
     >
     <nav class="hidden md:flex items-center gap-x-6">
       <g-link
-        class="hover:text-blue-500 transition duration-200 ease-in-out"
-        to="/"
-        >Home</g-link
-      >
-      <g-link
-        class="hover:text-blue-500 transition duration-200 ease-in-out"
-        to="/about"
-        >About</g-link
-      >
-      <g-link
-        class="hover:text-blue-500 transition duration-200 ease-in-out"
-        to="/blog"
-        >Blog</g-link
-      >
-      <g-link
-        class="hover:text-blue-500 transition duration-200 ease-in-out"
-        to="/contact"
-        >Contact</g-link
+        v-for="item in menuItems"
+        :key="item.id"
+        class="self-start hover:text-blue-500 transition duration-200 ease-in-out"
+        :to="item.url"
+        >{{ item.name }}</g-link
       >
     </nav>
 
@@ -46,24 +33,11 @@
         />
       </div>
       <g-link
+        v-for="item in menuItems"
+        :key="item.id"
         class="self-start hover:text-blue-500 transition duration-200 ease-in-out"
-        to="/"
-        >Home</g-link
-      >
-      <g-link
-        class="self-start hover:text-blue-500 transition duration-200 ease-in-out"
-        to="/about"
-        >About</g-link
-      >
-      <g-link
-        class="self-start hover:text-blue-500 transition duration-200 ease-in-out"
-        to="/blog"
-        >Blog</g-link
-      >
-      <g-link
-        class="self-start hover:text-blue-500 transition duration-200 ease-in-out"
-        to="/contact"
-        >Contact</g-link
+        :to="item.url"
+        >{{ item.name }}</g-link
       >
     </nav>
   </header>
@@ -82,6 +56,7 @@ import TheHamburger from "@/components/svg/TheHamburger";
 import TheCross from "@/components/svg/TheCross";
 
 export default {
+  props: { menuItems: Array },
   components: {
     TheHamburger,
     TheCross,

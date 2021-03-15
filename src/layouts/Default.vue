@@ -11,14 +11,14 @@
       class="fixed h-full w-full pointer-events-none z-10 bg-transparent transition duration-200 ease-in-out"
       :class="menuIsOpen ? 'bg-black md:bg-transparent bg-opacity-50' : ''"
     ></div>
-    <TheHeader @toggleMenu="toggleOverlay()" />
+    <TheHeader :menuItems="menu" @toggleMenu="toggleOverlay()" />
 
     <!-- Page Content -->
     <main>
       <slot />
     </main>
 
-    <TheFooter />
+    <TheFooter :menuItems="menu" />
   </div>
 </template>
 

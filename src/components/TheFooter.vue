@@ -17,7 +17,7 @@
         </p>
       </div>
 
-      <div class="flex md:justify-center space-x-16">
+      <div class="flex md:justify-end space-x-16">
         <div>
           <span class="supertitle text-blue-500">Links</span>
           <ul class="flex flex-col space-y-1">
@@ -29,10 +29,11 @@
         <div>
           <span class="supertitle text-blue-500">Site</span>
           <ul class="flex flex-col space-y-1">
-            <li><a href="/" class="hover:text-blue-500">Home</a></li>
-            <li><a href="/about" class="hover:text-blue-500">About</a></li>
-            <li><a href="/blog" class="hover:text-blue-500">Blog</a></li>
-            <li><a href="/contact" class="hover:text-blue-500">Contact</a></li>
+            <li v-for="item in menuItems" :key="item.id">
+              <g-link class="hover:text-blue-500" :to="item.url">{{
+                item.name
+              }}</g-link>
+            </li>
           </ul>
         </div>
       </div>
@@ -49,10 +50,7 @@ query {
 </static-query>
 
 <script>
-import TheWave from "@/components/svg/TheWave.vue";
 export default {
-  components: {
-    TheWave,
-  },
+  props: { menuItems: Array },
 };
 </script>

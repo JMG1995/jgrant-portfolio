@@ -18,7 +18,7 @@
       <slot />
     </main>
 
-    <TheFooter :menuItems="menu" />
+    <TheFooter :menuItems="menu" :socialLinks="socials" />
   </div>
 </template>
 
@@ -44,6 +44,10 @@ export default {
         { id: 1, name: "Home", url: "/" },
         { id: 2, name: "About", url: "/about" },
         { id: 3, name: "Contact", url: "/contact" },
+      ],
+      socials: [
+        { id: 1, name: "Twitter", url: "https://twitter.com/itsmejgrant" },
+        { id: 2, name: "GitHub", url: "https://github.com/JMG1995" },
       ],
       menuIsOpen: false,
     };

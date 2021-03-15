@@ -21,8 +21,15 @@
         <div>
           <span class="supertitle text-blue-500">Links</span>
           <ul class="flex flex-col space-y-1">
-            <li><a href="#" class="hover:text-blue-500">Twitter</a></li>
-            <li><a href="#" class="hover:text-blue-500">Github</a></li>
+            <li v-for="item in socialLinks" :key="item.id">
+              <g-link
+                :to="item.url"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="hover:text-blue-500"
+                >{{ item.name }}</g-link
+              >
+            </li>
           </ul>
         </div>
 
@@ -51,6 +58,6 @@ query {
 
 <script>
 export default {
-  props: { menuItems: Array },
+  props: { menuItems: Array, socialLinks: Array },
 };
 </script>

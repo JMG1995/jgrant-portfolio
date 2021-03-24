@@ -38,14 +38,9 @@
 </template>
 
 <script>
-import TheProjects from "@/components/TheProjects.vue";
-
 export default {
-  components: {
-    TheProjects,
-  },
   metaInfo: {
-    title: "Home",
+    title: "About",
   },
 };
 </script>

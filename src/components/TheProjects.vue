@@ -47,14 +47,10 @@ export default {
           title: "Carbon Neutral",
           description: `
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum
-            egestas posuere. Donec ac consequat ligula. Proin ullamcorper tempor
-            quam, ac lacinia sem cursus ut. Integer tempus pellentesque libero, eget
-            vestibulum sapien vulputate a.
+            Carbon Neutral is a custom-themed WordPress website with a focus on communicating to businesses the effect of their carbon offset.
           </p>
           <p>
-            Nunc sodales vel orci vel consequat. Nunc commodo, nibh vel ultricies
-            congue, libero tellus pulvinar dui, nec porttitor quam sapien a est. Sus
+            The site has been successful in getting more businesses to reduce their carbon impact and was built using Twig, Timber, WooCommerce and integrates with a custom developed carbon calculator plugin.
           </p>`,
           image: "/images/carbon-neutral.png",
           alt: "MacBook Pro with a great looking website on the screen.",
@@ -74,7 +70,7 @@ export default {
             Nunc sodales vel orci vel consequat. Nunc commodo, nibh vel ultricies
             congue, Integer tempus pellentesque libero, eget vestibulum sapien vulputate a. libero tellus pulvinar dui, nec porttitor quam sapien a est. Sus
           </p>`,
-          image: "/images/joegrant.png",
+          image: "/images/risk-advisory-services.png",
           alt: "A MacBook Pro with an excellent-looking website on the screen.",
           url: "https://riskadvisoryservices.com.au",
           source: null,

@@ -9,8 +9,28 @@
         <div class="text-lg md:text-xl text-gray-900 flex flex-col space-y-4">
           <p>
             If you'd like to get in touch, or even just have a chat, please
-            don't hesitate to reach out!
+            don't hesitate to reach out or find me on socials below!
           </p>
+          <div class="flex space-x-4">
+            <a
+              href="https://twitter.com/itsmejgrant"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <the-twitter
+                class="w-10 h-10 text-white bg-blue-600 rounded-sm p-2"
+              ></the-twitter>
+            </a>
+            <a
+              href="https://github.com/JMG1995"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <the-github
+                class="w-10 h-10 text-white bg-black rounded-sm p-2"
+              ></the-github>
+            </a>
+          </div>
         </div>
       </div>
       <form
@@ -67,9 +87,15 @@
 </template>
 
 <script>
+import TheTwitter from "@/components/svg/TheTwitter";
+import TheGithub from "@/components/svg/TheGithub";
 export default {
   metaInfo: {
     title: "Contact",
+  },
+  components: {
+    "the-twitter": TheTwitter,
+    "the-github": TheGithub,
   },
 };
 </script>

@@ -29,7 +29,7 @@
       >
         <template>Go to site</template>
         <the-arrow
-          class="text-blue-100 opacity-80 ml-1 group-hover:opacity-100 transition duration-200 ease-in-out w-5 h-4 cursor-pointer transform -rotate-45 scale-75"
+          class="text-blue-100 opacity-80 ml-1 group-hover:opacity-100 transition duration-200 ease-in-out w-5 h-4 cursor-pointer scale-75 transform -rotate-45"
         ></the-arrow
       ></a>
     </div>

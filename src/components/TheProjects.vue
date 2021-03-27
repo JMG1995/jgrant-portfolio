@@ -62,13 +62,10 @@ export default {
           title: "Risk Advisory Services",
           description: `
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum
-            egestas posuere. Donec ac consequat ligula. Proin ullamcorper tempor
-            quam, ac lacinia sem cursus ut. 
+            With their original site being dated and unmaintained, Risk Advisory Services were on the hunt for a new, modern WordPress website. After being designed by <a class="font-bold hover:underline" href="https://drawhistory.com/" target="_blank" rel="noopener noreferrer">DrawHistory</a>, we were happy to help with the build.
           </p>
           <p>
-            Nunc sodales vel orci vel consequat. Nunc commodo, nibh vel ultricies
-            congue, Integer tempus pellentesque libero, eget vestibulum sapien vulputate a. libero tellus pulvinar dui, nec porttitor quam sapien a est. Sus
+            Built with the <a class="font-bold hover:underline" href="https://twig.symfony.com/" target="_blank" rel="noopener noreferrer">Twig</a> for templating and <a class="font-bold hover:underline" href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer">TailwindCSS</a> for styling, this custom-built theme features dozens of components. This approach to building the site allows the the client to easily create pages with unique layouts.
           </p>`,
           image: "/images/risk-advisory-services.png",
           alt: "A MacBook Pro with an excellent-looking website on the screen.",

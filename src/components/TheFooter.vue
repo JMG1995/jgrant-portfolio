@@ -3,19 +3,9 @@
     <footer
       class="grid md:grid-cols-2 gap-6 container py-6 md:py-12 px-6 xl:px-0 font-body"
     >
-      <div>
-        <h3>
-          <g-link
-            to="/"
-            class="hover:text-blue-500 transition duration-200 ease-in-out"
-            >{{ $static.metadata.siteName }}</g-link
-          >
-        </h3>
-        <p>
-          Copyright Joe Grant {{ new Date().getFullYear() }}. All rights
-          reserved
-        </p>
-      </div>
+      <p class="text-sm self-end">
+        Copyright Joe Grant {{ new Date().getFullYear() }}. All rights reserved
+      </p>
 
       <div class="flex md:justify-end space-x-16">
         <div>

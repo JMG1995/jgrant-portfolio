@@ -23,7 +23,7 @@
       @clicked="toggleMenu()"
     />
     <nav
-      class="flex flex-col gap-y-6 md:hidden fixed top-0 right-0 w-screen bg-white p-6 shadow-xl h-full max-w-sm transition duration-200 ease-in-out transform z-20"
+      class="flex flex-col gap-y-4 md:hidden fixed top-0 right-0 w-screen bg-white p-6 shadow-xl h-full max-w-sm transition duration-200 ease-in-out transform z-20"
       :class="menuIsOpen ? 'translate-x-0' : 'translate-x-full'"
     >
       <div class="flex items-center justify-end">
@@ -39,6 +39,26 @@
         :to="item.url"
         >{{ item.name }}</g-link
       >
+      <div class="flex space-x-6 mt-auto">
+        <a
+          href="https://twitter.com/itsmejgrant"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center space-x-1 hover:underline"
+        >
+          <TheTwitter class="h-8 w-8 text-blue-600 p-1" />
+          <span>Twitter</span>
+        </a>
+        <a
+          href="https://github.com/JMG1995"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center space-x-1 hover:underline"
+        >
+          <TheGithub class="h-8 w-8 p-1" />
+          <span>GitHub</span>
+        </a>
+      </div>
     </nav>
   </header>
 </template>
@@ -54,12 +74,16 @@ query {
 <script>
 import TheHamburger from "@/components/svg/TheHamburger";
 import TheCross from "@/components/svg/TheCross";
+import TheTwitter from "@/components/svg/TheTwitter";
+import TheGithub from "@/components/svg/TheGithub";
 
 export default {
   props: { menuItems: Array },
   components: {
     TheHamburger,
     TheCross,
+    TheTwitter,
+    TheGithub,
   },
   data() {
     return {

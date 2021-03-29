@@ -12,6 +12,10 @@ module.exports = {
 	templates: {
 		Post: '/blog/:title',
 	},
+	icon: {
+		favicon: './src/favicon.png',
+		touchicon: './src/touch-favicon.png',
+	},
 	plugins: [
 		{
 			use: '@gridsome/source-filesystem',

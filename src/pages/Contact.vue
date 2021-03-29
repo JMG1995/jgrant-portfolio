@@ -35,8 +35,14 @@
       </div>
       <form
         action="#"
+        @submit.prevent="handleSubmit"
         class="w-full md:2/3 lg:w-1/3 mx-auto flex flex-col shadow-xl space-y-4 p-4 pb-6 bg-blue-600 rounded-sm"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        method="POST"
+        name="contact"
       >
+        <input type="hidden" name="form-name" value="contact" />
         <div class="flex flex-col space-y-1">
           <label
             class="uppercase text-sm text-white tracking-wide font-medium"
@@ -48,6 +54,7 @@
             name="name"
             id="name"
             class="shadow-md p-2 rounded-sm"
+            required
           />
         </div>
         <div class="flex flex-col space-y-1">
@@ -61,6 +68,7 @@
             name="email"
             id="email"
             class="shadow-md p-2 rounded-sm"
+            required
           />
         </div>
         <div class="flex flex-col space-y-1">
@@ -74,6 +82,7 @@
             id="message"
             rows="4"
             class="shadow-md p-2 rounded-sm"
+            required
           ></textarea>
         </div>
         <button
@@ -81,6 +90,9 @@
         >
           Submit
         </button>
+        <p v-if="success" class="text-lg text-white">
+          Thanks for that! I'll get back to you shortly.
+        </p>
       </form>
     </section>
   </Layout>
@@ -90,6 +102,12 @@
 import TheTwitter from "@/components/svg/TheTwitter";
 import TheGithub from "@/components/svg/TheGithub";
 export default {
+  data() {
+    return {
+      formData: {},
+      success: false,
+    };
+  },
   metaInfo() {
     return {
       title: "Contact - Freelance WordPress Developer in Perth",
@@ -103,6 +121,27 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    encode(data) {
+      return Object.keys(data)
+        .map(
+          (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+        )
+        .join("&");
+    },
+    handleSubmit(e) {
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: this.encode({
+          "form-name": e.target.getAttribute("name"),
+          ...this.formData,
+        }),
+      })
+        .then(() => (this.success = true))
+        .catch((error) => alert(error));
+    },
   },
   components: {
     "the-twitter": TheTwitter,

@@ -31,6 +31,11 @@
                 item.name
               }}</g-link>
             </li>
+            <li>
+              <g-link class="hover:text-blue-500" to="/sitemap.xml"
+                >Sitemap</g-link
+              >
+            </li>
           </ul>
         </div>
       </div>

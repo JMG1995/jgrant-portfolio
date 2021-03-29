@@ -18,4 +18,13 @@ export default function(Vue, { router, head, isClient }) {
 				'https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&family=Rubik:wght@400;500;600&display=swap',
 		}
 	);
+
+	// Add an external JavaScript before the closing </body> tag
+	head.script.push({
+		src: 'https://plausible.io/js/plausible.js',
+		body: true,
+		'data-domain': 'jgrant.co',
+		async: true,
+		defer: true,
+	});
 }

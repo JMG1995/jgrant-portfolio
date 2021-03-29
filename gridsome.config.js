@@ -8,7 +8,7 @@ module.exports = {
 	siteName: 'Joe Grant',
 	siteUrl: 'https://jgrant.co',
 	siteDescription:
-		'A simple starter for Gridsome using TailwindCSS and Markdown',
+		"My name is Joe and I'm a freelance WordPress Developer based in Perth, Western Australia. I help local businesses build clean, fast and accessible WordPress websites that help them grow their business. Don't hesitate to reach out if you're looking for a new site, or some help with your existing website.",
 	templates: {
 		Post: '/blog/:title',
 	},

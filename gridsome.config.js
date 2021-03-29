@@ -27,5 +27,11 @@ module.exports = {
 		{
 			use: 'gridsome-plugin-tailwindcss',
 		},
+		{
+			use: '@gridsome/plugin-sitemap',
+			options: {
+				include: ['/', '/about', '/contact'],
+			},
+		},
 	],
 };

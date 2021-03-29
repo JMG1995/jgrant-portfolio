@@ -13,8 +13,9 @@
           </p>
           <p>
             I have 2+ years commercial experience developing web solutions for
-            local businesses. I have a strong interest in technology and solving
-            head-scratching problems.
+            local businesses. I have a strong interest in creating clean,
+            accessible websites that help small businesses really speak to their
+            customers.
           </p>
           <p>
             I'm currently working for
@@ -39,8 +40,19 @@
 
 <script>
 export default {
-  metaInfo: {
-    title: "About",
+  metaInfo() {
+    return {
+      title: "About - Freelance WordPress Developer in Perth",
+      meta: [
+        {
+          // Meta Description
+          key: "description",
+          name: "description",
+          content:
+            "I'm a freelance WordPress Developer who was born and raised in Perth, Western Australia. I love helping small businesses by creating websites that represent who they are and what they makes them exceptional. Be sure to reach out to see how I can help create a positive change for your business.",
+        },
+      ],
+    };
   },
 };
 </script>

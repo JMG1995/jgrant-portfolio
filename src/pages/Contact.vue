@@ -8,8 +8,8 @@
         <h1 class="font-medium">Get In Touch</h1>
         <div class="text-lg md:text-xl text-gray-900 flex flex-col space-y-4">
           <p>
-            If you'd like to get in touch, or even just have a chat, please
-            don't hesitate to reach out or find me on socials below!
+            If you'd like to hire me - or even just have a chat - please don't
+            hesitate to reach out. You can also find me on socials below!
           </p>
           <div class="flex space-x-4">
             <a
@@ -90,8 +90,19 @@
 import TheTwitter from "@/components/svg/TheTwitter";
 import TheGithub from "@/components/svg/TheGithub";
 export default {
-  metaInfo: {
-    title: "Contact",
+  metaInfo() {
+    return {
+      title: "Contact - Freelance WordPress Developer in Perth",
+      meta: [
+        {
+          // Meta Description
+          key: "description",
+          name: "description",
+          content:
+            "Is your website lacking compared to the competition? Or maybe you're looking to improve the experience on mobile? I want to help you get the most out of your website, because your website is a reflection of your business. You are exceptional, so your website should be too.",
+        },
+      ],
+    };
   },
   components: {
     "the-twitter": TheTwitter,

@@ -10,7 +10,7 @@ module.exports = {
 	siteDescription:
 		"My name is Joe and I'm a freelance WordPress Developer based in Perth, Western Australia. I help local businesses build clean, fast and accessible WordPress websites that help them grow their business. Don't hesitate to reach out if you're looking for a new site, or some help with your existing website.",
 	templates: {
-		Post: '/blog/:title',
+		Post: '/blog/:slug',
 	},
 	icon: {
 		favicon: './src/favicon.png',
@@ -22,6 +22,9 @@ module.exports = {
 			options: {
 				path: 'content/posts/**/*.md',
 				typeName: 'Post',
+				remark: {
+					plugins: ['@gridsome/remark-prismjs'],
+				},
 			},
 		},
 		{

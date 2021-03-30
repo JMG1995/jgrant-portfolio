@@ -1,6 +1,6 @@
 <template>
   <div
-    class="text-gray-900 relative"
+    class="text-gray-900 relative flex flex-col min-h-screen"
     :class="
       menuIsOpen
         ? 'max-h-screen overflow-hidden md:max-h-full md:overflow-visible'

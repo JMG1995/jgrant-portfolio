@@ -1,5 +1,5 @@
 <template>
-  <div class="relative">
+  <div class="relative mt-auto">
     <footer
       class="grid md:grid-cols-2 gap-6 container py-6 md:py-12 px-6 xl:px-0 font-body"
     >
@@ -9,7 +9,7 @@
 
       <div class="flex md:justify-end space-x-16">
         <div>
-          <span class="supertitle text-blue-500">Links</span>
+          <span class="supertitle text-blue-700">Links</span>
           <ul class="flex flex-col space-y-1">
             <li v-for="item in socialLinks" :key="item.id">
               <g-link
@@ -24,7 +24,7 @@
         </div>
 
         <div>
-          <span class="supertitle text-blue-500">Site</span>
+          <span class="supertitle text-blue-700">Site</span>
           <ul class="flex flex-col space-y-1">
             <li v-for="item in menuItems" :key="item.id">
               <g-link class="hover:text-blue-500" :to="item.url">{{

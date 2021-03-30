@@ -1,21 +1,25 @@
 <template>
   <Layout>
-    <!-- Back to Blog Button -->
-    <g-link to="/blog/"
-      ><button class="text-blue-500">&larr; Back</button></g-link
-    >
+    <div class="container">
+      <!-- Back to Blog Button -->
+      <g-link to="/blog/"
+        ><button class="text-blue-600 hover:underline">
+          &larr; Back
+        </button></g-link
+      >
 
-    <article>
-      <!-- Title + Date -->
-      <div class="my-6">
-        <h1 class="text-xl mb-2" v-html="$page.post.title" />
-        <p v-html="$page.post.date" class="text-gray-600" />
-        <hr class="my-2" />
-      </div>
+      <article>
+        <!-- Title + Date -->
+        <div class="my-6">
+          <h1 class="text-3xl mb-2">{{ $page.post.title }}</h1>
+          <p class="text-gray-600">{{ $page.post.date }}</p>
+          <hr class="my-2" />
+        </div>
 
-      <!-- Blog Post -->
-      <div v-html="$page.post.content" class="space-y-6" />
-    </article>
+        <!-- Blog Post -->
+        <div v-html="$page.post.content" class="space-y-6" />
+      </article>
+    </div>
   </Layout>
 </template>
 
@@ -48,14 +52,3 @@ query Post ($path: String!) {
   }
 }
 </page-query>
-
-<style>
-/* Apply Global Article Styles Here */
-article h2 {
-  @apply text-xl font-bold;
-}
-
-article a {
-  @apply font-semibold text-blue-500;
-}
-</style>

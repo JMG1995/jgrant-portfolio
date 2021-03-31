@@ -47,7 +47,7 @@
           <label
             class="uppercase text-sm text-white tracking-wide font-medium"
             for="name"
-            >Name:</label
+            >Name*:</label
           >
           <input
             type="text"
@@ -55,13 +55,14 @@
             id="name"
             class="shadow-md p-2 rounded-sm"
             required
+            autocomplete="name"
           />
         </div>
         <div class="flex flex-col space-y-1">
           <label
             class="uppercase text-sm text-white tracking-wide font-medium"
             for="email"
-            >Email:</label
+            >Email*:</label
           >
           <input
             type="email"
@@ -69,13 +70,28 @@
             id="email"
             class="shadow-md p-2 rounded-sm"
             required
+            autocomplete="email"
           />
         </div>
         <div class="flex flex-col space-y-1">
           <label
             class="uppercase text-sm text-white tracking-wide font-medium"
+            for="budget"
+            >Budget:</label
+          >
+          <select name="budget" id="budget" class="shadow-md p-2 rounded-sm">
+            <option value="none">Not relevant</option>
+            <option value="1500">Less than $1,500</option>
+            <option value="1500-2500">$1,500 - $2,500</option>
+            <option value="2500-5000">$2,500 - $5,000</option>
+            <option value="5000+">$5,000+</option>
+          </select>
+        </div>
+        <div class="flex flex-col space-y-1">
+          <label
+            class="uppercase text-sm text-white tracking-wide font-medium"
             for="message"
-            >Message:</label
+            >Message*:</label
           >
           <textarea
             name="message"

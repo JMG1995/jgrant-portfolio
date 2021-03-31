@@ -18,14 +18,15 @@
             customers.
           </p>
           <p>
-            I'm currently working for
+            I currently work at
             <a
               class="text-blue-600 hover:underline"
               href="https://themarketherald.com.au"
               target="_blank"
               rel="noopener noreferrer"
               >The Market Herald</a
-            >, maintaining the website and developing internal applications.
+            >
+            maintaining the website and developing internal applications.
           </p>
         </div>
       </div>

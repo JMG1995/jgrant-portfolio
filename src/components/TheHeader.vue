@@ -32,13 +32,15 @@
           @clicked="toggleMenu()"
         />
       </div>
-      <g-link
-        v-for="item in menuItems"
-        :key="item.id"
-        class="self-start hover:text-blue-500 transition duration-200 ease-in-out"
-        :to="item.url"
-        >{{ item.name }}</g-link
-      >
+      <div class="flex flex-col space-y-4">
+        <g-link
+          v-for="item in menuItems"
+          :key="item.id"
+          class="self-start hover:text-blue-500 transition duration-200 ease-in-out"
+          :to="item.url"
+          >{{ item.name }}</g-link
+        >
+      </div>
       <div class="flex space-x-6 mt-auto">
         <a
           href="https://twitter.com/itsmejgrant"

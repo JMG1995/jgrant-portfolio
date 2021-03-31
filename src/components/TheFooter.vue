@@ -4,7 +4,9 @@
       class="grid md:grid-cols-2 gap-6 container py-6 md:py-12 px-6 xl:px-0 font-body"
     >
       <p class="text-sm self-end">
-        Copyright Joe Grant {{ new Date().getFullYear() }}. All rights reserved
+        Copyright Halfcab {{ new Date().getFullYear() }}. All rights reserved.
+        <br />
+        ABN: 54 935 938 236
       </p>
 
       <div class="flex md:justify-end space-x-16">

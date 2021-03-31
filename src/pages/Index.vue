@@ -7,7 +7,7 @@
       <h1 class="font-medium">Hi, I'm Joe.</h1>
       <p class="text-lg lg:text-3xl text-gray-600 lg:w-3/5">
         I’m a front-end developer based out of Perth. I spend my days designing
-        and building websites using WordPress or the JAMStack.
+        and building WordPress websites.
       </p>
     </section>
 

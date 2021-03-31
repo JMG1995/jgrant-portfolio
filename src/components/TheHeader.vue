@@ -36,7 +36,7 @@
         <g-link
           v-for="item in menuItems"
           :key="item.id"
-          class="self-start hover:text-blue-500 transition duration-200 ease-in-out"
+          class="text-lg self-start hover:text-blue-500 transition duration-200 ease-in-out"
           :to="item.url"
           >{{ item.name }}</g-link
         >

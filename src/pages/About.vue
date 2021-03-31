@@ -32,7 +32,7 @@
       </div>
       <img
         class="w-2/3 md:2/3 lg:w-1/3 mx-auto self-start rounded-full shadow-md"
-        src="/images/joseph-left.jpg"
+        src="/images/joseph-left.webp"
         alt="Joe Grant wearing a suit, smiling"
       />
     </section>

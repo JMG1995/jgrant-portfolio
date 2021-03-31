@@ -52,7 +52,7 @@ export default {
           <p>
             The site has been successful in getting more businesses to reduce their carbon impact and was built using Twig, Timber, WooCommerce and integrates with a custom developed carbon calculator plugin.
           </p>`,
-          image: "/images/carbon-neutral.png",
+          image: "/images/carbon-neutral.webp",
           alt: "MacBook Pro with a great looking website on the screen.",
           url: "https://carbonneutral.com.au",
           source: null,
@@ -67,7 +67,7 @@ export default {
           <p>
             Built with the <a class="font-bold hover:underline" href="https://twig.symfony.com/" target="_blank" rel="noopener noreferrer">Twig</a> for templating and <a class="font-bold hover:underline" href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer">TailwindCSS</a> for styling, this custom-built theme features dozens of components. This approach to building the site allows the the client to easily create pages with unique layouts.
           </p>`,
-          image: "/images/risk-advisory-services.png",
+          image: "/images/risk-advisory-services.webp",
           alt: "A MacBook Pro with an excellent-looking website on the screen.",
           url: "https://riskadvisoryservices.com.au",
           source: null,
